@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Data Logger",
+  "version": "1.0",
+  "description": "Logs localStorage and cookies of the active tab and displays buttons",
+  "icons": {
+    "16": "ruby from thailand.jpeg",
+    "48": "ruby from thailand.jpeg",
+    "128": "ruby from thailand.jpeg"
+  },
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
